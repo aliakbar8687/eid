@@ -1,0 +1,252 @@
+/* General Body Styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* background: url('https://archive.org/download/abstractglittergifs/1596E46A-A01E-42CF-BF5D-63952A2FAD7C.gif') no-repeat center center/cover; */
+}
+
+/* Header Styling */
+header {
+    background-color: #06fa43; /* Bright green background */
+    color: #fff;
+    padding: 3rem;
+    text-align: center;
+    text-shadow: 1px 1px 5px #000; /* Dark shadow for contrast */
+}
+
+h1, p,h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    color: #000; /* Black text color */
+}
+
+/* h1 Styling */
+h1,h2 {
+    font-size: 3rem;
+    animation: shine 3s infinite, colorChange 3s infinite; /* Shine and color change effects */
+}
+
+/* p Styling */
+p {
+    font-size: 1.5rem;
+    animation: shine 3s infinite 1s, colorChange 4s infinite 1s; /* Shine and color change effects with delay */
+}
+
+/* Keyframes for the smoky shining effect */
+@keyframes shine {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Keyframes for color changing effect */
+@keyframes colorChange {
+    0% {
+        color: #000; /* Black */
+    }
+    25% {
+        color: #333; /* Dark Grey */
+    }
+    50% {
+        color: #f72929; /* Medium Dark Grey */
+    }
+    75% {
+        color: #333; /* Dark Grey */
+    }
+    100% {
+        color: #000; /* Black */
+    }
+}
+
+
+/* Carousel Item and Image Adjustments */
+.carousel-item {
+    width: 100%;
+    height: 800px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Ensure it fills the height of the carousel item */
+    object-fit:contain; /* Ensure the image covers the container without stretching */
+    object-position: center; /* Center the image within its container */
+}
+
+
+/* Quotes Section Styling */
+.quotes-section {
+    background-color: #06fa43;
+    padding: 2rem;
+}
+
+.carousel-inner .carousel-item {
+    text-align: center; /* Center-align the quotes */
+}
+
+blockquote {
+    font-size: 1.5rem;
+    color: #6c757d;
+    max-width: 800px; /* Limit the width to prevent too long text */
+    line-height: 1.6; /* Increase line height for better readability */
+    background: #fff; /* Add background color for readability */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Video Section Styling */
+.video-section ,.container {
+    background-color: #06fa43;
+    padding: 2rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #06fa43;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .carousel-caption p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 200px; /* Adjust height for extra small screens */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.25rem; /* Further adjust font size for extra small screens */
+    }
+
+    .carousel-caption p {
+        font-size: 0.875rem; /* Further adjust font size for extra small screens */
+    }
+}
+
+/* Flag Styling */
+.flags {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.flags .flag {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+    display: inline-block;
+    animation: fly-left-right 3s ease-in-out infinite;
+}
+
+@keyframes fly-left-right {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(20px) translateY(-10px) rotate(5deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+}
+
+/* Light Bulbs Styling */
+.light-bulbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.bulb {
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+    margin: 5px 5px; /* Increased margin */
+    background-color: #4caf50; /* Default color */
+    border-radius: 50%;
+    animation: glow 2s infinite, colorChange 4s infinite; /* Added colorChange animation */
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.5), 0 0 20px rgba(76, 175, 80, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(76, 175, 80, 1), 0 0 30px rgba(76, 175, 80, 0.7);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #f5b811; /* Light Green */
+    }
+    25% {
+        background-color: #e7f431; /* Light Green */
+    }
+    50% {
+        background-color: #fa7b7b; /* Dark Green */
+    }
+    75% {
+        background-color: #e7f431; /* Medium Green */
+    }
+    100% {
+        background-color: #f5b811; /* Light Green */
+    }
+}
+
+.marquee-container {
+    background: linear-gradient(to right, #fdab38, #4eef7e);
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 8px;
+}
+
+.marquee {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+}
+
+.marquee span {
+    display: inline-block;
+    margin: 0 50px;
+    animation: fadeInOut 8s linear infinite;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
